@@ -1,6 +1,8 @@
 import React from "react";
 import TypeWritter from "typewriter-effect";
 import { motion } from "framer-motion";
+import Link from "next/link";
+
 const HeroSection = () => {
 
     return (
@@ -32,10 +34,17 @@ const HeroSection = () => {
                                         .deleteAll()
                                         .typeString`<span style="color:#9E7BFF">Web Developer</span>`
                                         .pauseFor(1500)
-                                        .deleteAll();
+                                        .deleteAll()
+                                        .start();
                                 }}
                             ></TypeWritter>
                         </span>
+                        <p className="text-sky-100 mt-8 text-base sm:text-lg md:text-xl mb-6">Slide down to know more about me!</p>
+                        <Link 
+                            href="https://drive.google.com/file/d/1ajOJwhrua1lElHtbVjzOv12ySXn8xPBa/view?usp=sharing"
+                            className="px-6 inline-block py-3 rounded-full border border-2 border-purple-500 hover:bg-purple-400">
+                        View My Resume
+                        </Link>
                     </h1>
                 </motion.div>
             </div>
